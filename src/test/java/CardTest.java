@@ -39,7 +39,7 @@ public class CardTest {
         driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79270000000");
         driver.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         driver.findElement(By.cssSelector("button")).click();
-        String expected = "Ваша заявка успешно отправлена!  менеджер свяжется с вами в ближайшее время.";
+        String expected = "Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.";
         String actual = driver.findElement(By.cssSelector("[data-test-id=order-success]")).getText().trim();
         Assertions.assertEquals(expected,actual);
 
